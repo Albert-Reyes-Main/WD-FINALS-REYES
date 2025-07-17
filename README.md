@@ -11,7 +11,7 @@ Visit the live portfolio here: [https://albert-reyes-main.github.io/](https://al
 
 
 ## 📁 File Structure
-'''plaintext
+```plaintext
 │   .gitattributes
 │   index.html
 │   README.md
