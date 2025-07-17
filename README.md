@@ -8,7 +8,7 @@ A futuristic, sci-fi-inspired personal website built to showcase my background, 
 
 Visit the live portfolio here: [https://albert-reyes-main.github.io/](https://albert-reyes-main.github.io/)
 
----
+''plaintext
 
 ## 📁 File Structure
 
