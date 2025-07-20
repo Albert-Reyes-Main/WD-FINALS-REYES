@@ -9,13 +9,7 @@
 html, body {
   height: 100%;
   font-family: 'Press Start 2P', monospace;
-  background: repeating-linear-gradient(
-    0deg,
-    #0c0c0c,
-    #0c0c0c 2px,
-    #101010 2px,
-    #101010 4px
-  );
+  background: #000;
   color: #ffffff;
   overflow-x: hidden;
   line-height: 1.5;
@@ -27,7 +21,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0 60px;
-  background-color: #111;
+  background-color: #000000;
   border-bottom: 1px solid #222;
   position: fixed;
   top: 0;
@@ -80,7 +74,7 @@ main {
 }
 
 .hobby-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0);
   border: 2px solid #00ffff;
   box-shadow: 0 0 10px #00ffff88;
   padding: 30px 20px;
