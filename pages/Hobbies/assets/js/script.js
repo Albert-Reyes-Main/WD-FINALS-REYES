@@ -1,26 +1,29 @@
-
-document.querySelectorAll('.slider-wrapper').forEach(wrapper => {
-  const images = wrapper.querySelectorAll('.slider-image');
-  const prevBtn = wrapper.querySelector('.prev');
-  const nextBtn = wrapper.querySelector('.next');
-  let current = 0;
-
-  function updateSlider(index) {
-    images.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
-    });
+const sliders = {
+  games: {
+    images: document.querySelectorAll('.games-slide'),
+    index: 0
+  },
+  movies: {
+    images: document.querySelectorAll('.movies-slide'),
+    index: 0
   }
+};
 
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + images.length) % images.length;
-    updateSlider(current);
+function showSlide(group, index) {
+  const slider = sliders[group];
+  slider.images.forEach((img, i) => {
+    img.classList.toggle('active', i === index);
   });
+}
 
-  nextBtn.addEventListener('click', () => {
-    current = (current + 1) % images.length;
-    updateSlider(current);
-  });
-});
+function nextSlide(group) {
+  const slider = sliders[group];
+  slider.index = (slider.index + 1) % slider.images.length;
+  showSlide(group, slider.index);
+}
 
-
-
+function prevSlide(group) {
+  const slider = sliders[group];
+  slider.index = (slider.index - 1 + slider.images.length) % slider.images.length;
+  showSlide(group, slider.index);
+}

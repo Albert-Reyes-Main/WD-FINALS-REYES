@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,19 +8,18 @@
 
 html, body {
   height: 100%;
-  font-family: 'Orbitron', sans-serif;
-  color: #d3d3d3;
-  background: linear-gradient(135deg, #121212 0%, #1a1a1a 25%, #121212 50%, #1a1a1a 75%, #121212 100%);
-  background-size: 600% 600%;
-  animation: pixelWave 20s linear infinite;
-  line-height: 1.6;
+  font-family: 'Press Start 2P', monospace;
+  background: repeating-linear-gradient(
+    0deg,
+    #0c0c0c,
+    #0c0c0c 2px,
+    #101010 2px,
+    #101010 4px
+  );
+  color: #ffffff;
   overflow-x: hidden;
-}
-
-@keyframes pixelWave {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -32,33 +33,67 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: #000;
+  border-bottom: 4px solid #00ffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
   z-index: 1000;
-  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 12px #00ffff;
 }
-
 .nav-logo img {
-  height: 100px;
-  filter: drop-shadow(0 0 4px #00f0ff);
+  height: 50px;
+  width: auto;
 }
 
 .nav-links {
-  flex: 1;
-  list-style: none;
   display: flex;
-  justify-content: flex-end;
+  list-style: none;
   gap: 30px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #b0b0b0;
-  transition: color 0.3s;
-  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  padding: 10px;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #00f0ff;
+  color: #00ffff;
+  border-color: #00ffff;
+}
+
+main {
+  padding: 140px 20px 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.hobby-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff88;
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  font-size: 0.85rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px #00ffff;
 }
 
 footer {
@@ -66,100 +101,12 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 14px;
   text-align: center;
-  padding: 16px;
-  font-size: 0.9rem;
-  color: #00f0ff;
-  background-color: #111;
-  border-top: 1px solid #222;
-  text-shadow: 0 0 6px #00f0ff;
-  z-index: 1000;
-  font-family: 'Orbitron', sans-serif;
+  font-size: 0.6rem;
+  background-color: #000;
+  color: #00ffff;
+  border-top: 4px solid #ff33cc;
+  box-shadow: 0 -2px 12px #ff33cc;
 }
 
-
-.main-header {
-  align-items: center;
-  padding-top: 160px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-.glow-title {
-  display: inline-block;
-  font-size: 3.2rem;
-  font-family: 'Orbitron', sans-serif;
-  color: #00f0ff;
-  padding: 16px 32px;
-  border: 2px solid #00f0ff;
-  border-radius: 10px;
-  text-shadow: 0 0 16px #00f0ff;
-  box-shadow: 0 0 20px #00f0ff44;
-}
-
-
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-top: 10px;
-}
-
-.projects-section {
-  padding: 60px 20px 120px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-.project-card {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-left: 4px solid #00f0ff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 0 14px #00f0ff33;
-  backdrop-filter: blur(4px);
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 320px;
-  flex: 1 1 280px;
-}
-
-.project-card h2 {
-  font-size: 1.5rem;
-  color: #00f0ff;
-  margin-bottom: 12px;
-  text-shadow: 0 0 6px #00f0ff88;
-}
-
-.project-card p {
-  color: #ccc;
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-}
-
-.project-link {
-  display: inline-block;
-  color: #00f0ff;
-  text-decoration: none;
-  border: 1px solid #00f0ff;
-  padding: 6px 14px;
-  border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
-  font-size: 0.9rem;
-}
-
-.project-link:hover {
-  background-color: #00f0ff;
-  color: #000;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px #00f0ff88;
-}
